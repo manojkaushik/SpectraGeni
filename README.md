@@ -25,8 +25,8 @@ The project evaluates machine learning classifiers and employs ensemble learning
 
 - **Crop Classes**: 6 agricultural crop varieties (Capsicum, Chilli, Mulberry, Potato, Tomato_Healthy, Tomato_Unhealthy)
 - **Features**: 943-dimensional hyperspectral bands (reflectance spectra)
-- **Techniques**: Augmentation from ~200-300 real samples to 2000-5000 synthetic samples per class
-- **Storage Format**: CSV/DataFrame-compatible structure
+- **Techniques**: Augmentation from imbalanced ~75-2672 real samples to 2000-5000 synthetic samples per class
+- **Storage Format**: Parquet/CSV/DataFrame-compatible structure
 
 ## Project Structure
 
