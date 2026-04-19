@@ -8,7 +8,7 @@
 
 ## Overview
 
-SpectraGeni is a comprehensive framework for generating high-quality synthetic hyperspectral data for agricultural crop classification. The project implements and compares four advanced data augmentation techniques—SMOTE, Borderline-SMOTE (BSMOTE), Conditional Tabular GAN (CTGAN), and a proprietary Convolutional Conditional Variational Autoencoder (CNN-CVAE)—to address class imbalance and expand training datasets for hyperspectral crop classification tasks.
+SpectraGeni is a comprehensive framework for generating high-quality synthetic hyperspectral data for agricultural crop classification. The project implements and compares four advanced data augmentation techniques: SMOTE, Borderline-SMOTE (BSMOTE), Conditional Tabular GAN (CTGAN), and a proprietary Convolutional Conditional Variational Autoencoder (CNN-CVAE) to address class imbalance and expand training datasets for hyperspectral crop classification tasks.
 
 The project evaluates machine learning classifiers and employs ensemble learning strategies to achieve robust crop classification with synthetic data.
 
@@ -88,7 +88,7 @@ SpectraGeni/
 - Output: ~2,000 samples per crop class
 - Best for: Learning complex, non-linear distributions
 
-### 4. **CNN-CVAE (Convolutional Conditional Variational Autoencoder)** ⭐
+### 4. **CNN-CVAE (Convolutional Conditional Variational Autoencoder)**
 
 - Proprietary deep learning architecture
 - Custom 1D CNN encoder/decoder (943 → 64 latent → 943)
@@ -105,37 +105,6 @@ SpectraGeni/
 - pip or conda package manager
 - 8GB+ RAM (16GB+ recommended for CTGAN/CVAE training)
 - GPU support (optional but recommended for deep learning models)
-
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/manojkaushik/SpectraGeni.git
-cd SpectraGeni
-```
-
-### Step 2: Create Virtual Environment
-
-```bash
-# Using venv
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# OR using conda
-conda create -n spectrageni python=3.8
-conda activate spectrageni
-```
-
-### Step 3: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 4: Verify Installation
-
-```bash
-python -c "import tensorflow, ctgan, pandas, sklearn; print('All packages installed successfully!')"
-```
 
 ## Usage Guide
 
@@ -178,46 +147,9 @@ Key packages (see `requirements.txt` for complete list):
 - **Visualization**: matplotlib, plotly, seaborn, umap, scikit-learn
 - **Utilities**: Faker, graphviz, jupyter
 
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-Please ensure code follows PEP 8 style guidelines and includes documentation.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Hyperspectral crop dataset from agricultural research sources
-- SMOTE implementation: [imbalanced-learn](https://imbalanced-learn.org/)
-- CTGAN implementation: [CTGAN](https://github.com/sdv-dev/CTGAN)
-- Visualization tools: Plotly, Matplotlib, UMAP, t-SNE
-
-## Troubleshooting
-
-### Issue: Out of Memory Error during CTGAN/CVAE training
-
-**Solution**: Reduce batch size in constants.py or use data sampling
-
-### Issue: Poor synthetic data quality
-
-**Solution**: Try different augmentation techniques or adjust hyperparameters
-
-### Issue: GPU not detected
-
-**Solution**: Install GPU support for TensorFlow/PyTorch (CUDA, cuDNN)
-
-### Issue: Missing dependencies
-
-**Solution**: Run `pip install -r requirements.txt` again with `--upgrade` flag
 
 ## Future Enhancements
 
