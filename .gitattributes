@@ -1,2 +1,21 @@
-# Auto detect text files and perform LF normalization
+# Auto detect text files and normalize line endings to LF
 * text=auto
+
+# Text files with LF
+*.md text eol=lf
+*.py text eol=lf
+*.ipynb text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.sh text eol=lf
+LICENSE text eol=lf
+README* text eol=lf
+
+# Binary files
+*.pkl binary
+*.h5 binary
+*.pth binary
+*.pt binary

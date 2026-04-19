@@ -10,14 +10,14 @@
 
 SpectraGeni is a comprehensive framework for generating high-quality synthetic hyperspectral data for agricultural crop classification. The project implements and compares four advanced data augmentation techniques—SMOTE, Borderline-SMOTE (BSMOTE), Conditional Tabular GAN (CTGAN), and a proprietary Convolutional Conditional Variational Autoencoder (CNN-CVAE)—to address class imbalance and expand training datasets for hyperspectral crop classification tasks.
 
-The project evaluates 15+ machine learning classifiers and employs ensemble learning strategies to achieve robust crop classification with synthetic data.
+The project evaluates machine learning classifiers and employs ensemble learning strategies to achieve robust crop classification with synthetic data.
 
 ## Key Features
 
 - **Multiple Data Augmentation Techniques**: SMOTE, BSMOTE, CTGAN, and proprietary CNN-CVAE
 - **943-Dimensional Hyperspectral Data**: Real-world agricultural spectral data with 6 crop classes
-- **Advanced Quality Metrics**: KL divergence, Hellinger distance, Spectral Angle Mapper (SAM)
-- **Comprehensive ML Pipeline**: 15+ classifiers with custom ensemble methods (Voting, Stacking)
+- **Advanced Quality Metrics**: Hellinger distance, Pairwise Correlation Difference, Propensity Score, Spectral Angle Mapper (SAM)
+- **Comprehensive ML Pipeline**: ML classifiers with custom ensemble methods (Voting, Stacking)
 - **Data Visualization**: 3D projection comparisons (PCA, UMAP, t-SNE) of real vs. synthetic data
 - **Production-Ready**: Modular code with common utilities for data handling and augmentation
 
@@ -58,7 +58,7 @@ SpectraGeni/
 │   ├── 04.CVAE.py                            # CVAE quality assessment
 │   └── common_fun.py                          # Quality metric utilities
 │
-└── Trainig-Testing_both/                      # Classification & Ensembles
+└── Training-Testing_both/                    # Classification & Ensembles
     ├── 1.Custom_ensemble_SMOTE.ipynb          # SMOTE + ensemble classifier
     ├── 2.Custom_ensemble_BSMOTE.ipynb         # BSMOTE + ensemble classifier
     ├── 3.Custom_ensemble_CTGAN.ipynb          # CTGAN + ensemble classifier
@@ -109,7 +109,7 @@ SpectraGeni/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/SpectraGeni.git
+git clone https://github.com/manojkaushik/SpectraGeni.git
 cd SpectraGeni
 ```
 
@@ -162,10 +162,10 @@ python -c "import tensorflow, ctgan, pandas, sklearn; print('All packages instal
    └─→ Data_augmentation/6.3D_plotting (Real Vs. Synthetic) CVAE.ipynb
 
 5. Classification & Ensemble Learning
-   ├─→ Trainig-Testing_both/1.Custom_ensemble_SMOTE.ipynb
-   ├─→ Trainig-Testing_both/2.Custom_ensemble_BSMOTE.ipynb
-   ├─→ Trainig-Testing_both/3.Custom_ensemble_CTGAN.ipynb
-   └─→ Trainig-Testing_both/4.Custom_ensemble_CNN-CVAE_real80.ipynb
+   ├─→ Training-Testing_both/1.Custom_ensemble_SMOTE.ipynb
+   ├─→ Training-Testing_both/2.Custom_ensemble_BSMOTE.ipynb
+   ├─→ Training-Testing_both/3.Custom_ensemble_CTGAN.ipynb
+   └─→ Training-Testing_both/4.Custom_ensemble_CNN-CVAE_real80.ipynb
 ```
 
 ### Quick Start: Train with SMOTE
@@ -203,7 +203,7 @@ jupyter notebook Data_augmentation/04.SpectraGeni/train_CNN_CVAE.ipynb
 
 ```bash
 # 1. Open ensemble notebook
-jupyter notebook Trainig-Testing_both/1.Custom_ensemble_SMOTE.ipynb
+jupyter notebook Training-Testing_both/1.Custom_ensemble_SMOTE.ipynb
 
 # 2. The notebook will:
 #    - Load SMOTE-augmented data
@@ -266,7 +266,7 @@ If you use SpectraGeni in your research or projects, please cite:
   title={SpectraGeni: Advanced Synthetic Hyperspectral Data Generation for Crop Classification},
   author={Kaushik, Manoj},
   year={2026},
-  url={https://github.com/yourusername/SpectraGeni}
+  url={https://github.com/manojkaushik/SpectraGeni}
 }
 ```
 
@@ -295,13 +295,6 @@ Please ensure code follows PEP 8 style guidelines and includes documentation.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-
-**Manoj Kaushik**
-
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
 
 ## Acknowledgments
 
@@ -336,6 +329,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Interactive web dashboard for data exploration
 - [ ] Extended evaluation on multiple hyperspectral datasets
 - [ ] Federated learning support for distributed training
+
+## Author
+
+**Manoj Kaushik**
+
+- GitHub: [@manojkaushik](https://github.com/manojkaushik)
+- Email: manojkaushik93@gmail.com
 
 ---
 
